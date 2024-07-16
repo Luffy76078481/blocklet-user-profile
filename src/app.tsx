@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { px2remTransformer, StyleProvider } from '@ant-design/cssinjs';
-import Profile from './pages/profile';
+import Profile from './pages/profile/profile';
 
 function App() {
   return (

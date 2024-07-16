@@ -5,10 +5,16 @@ const router = Router();
 
 router.use('/user', middleware.user(), (req, res) => res.json(req.user || {}));
 
-router.use('/data', (_, res) =>
-  res.json({
-    message: 'Hello Blocklet111!',
-  }),
-);
+import userController from '../controllers/userController';
+
+
+router.get('/users/getInfo', (req, res) => {
+    userController.getUser(req, res);
+});
+
+router.post('/users/updateInfo', (req, res) => {
+    userController.updateUser(req, res);
+});
+
 
 export default router;

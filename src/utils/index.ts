@@ -2,9 +2,9 @@
 
 /**
  * 判断是否移动端
- * @returns RegExpMatchArray | null
+ * @returns boolean
  */
-export const isMobileDevice = () => {
+export const isMobileDevice = (): boolean => {
     return navigator.userAgent.match(
         /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
     ) ? true : false;
