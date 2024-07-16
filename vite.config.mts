@@ -18,15 +18,21 @@ export default defineConfig(() => {
       },
     },
     css: {
-      preprocessorOptions: {
-        scss: {},
+      modules: {
+        mode: 'local', // 启用模块化
+        generateScopedName: '[name]__[local]--[hash:base64:5]',
       },
+      preprocessorOptions: {
+        scss: {
+        },
+      },
+      devSourcemap: true,
       postcss: {
         plugins: [
           postCssPxToRem({
             rootValue: 16, 
             // 需要转换的属性，除 border 外所有px 转 rem
-            propList: ['*', "!border"], 
+            propList: ['*', "!border","!max-width","!min-width"], 
             selectorBlackList: ['norem'], // 过滤掉norem-开头的class，不进行rem转换
             replace: true, // 直接更换成rem
             mediaQuery: true, // 是否要在媒体查询中转换px

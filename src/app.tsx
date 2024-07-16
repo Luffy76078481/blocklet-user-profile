@@ -4,12 +4,12 @@ import Profile from './pages/profile';
 
 function App() {
   return (
-    <div className="app">
+    <>
       <Routes>
         <Route path="/" element={<Profile />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
-    </div>
+    </>
   );
 }
 
