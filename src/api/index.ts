@@ -2,7 +2,7 @@ import { createAxios } from '@blocklet/js-sdk';
 
 
 // demo代码 不考虑登陆 token写死
-const TOKEN = 'testuesrid_asdbansdmb234923764123jk'
+const TOKEN = 'testuesrid_asdbansdmb234923764123j1k'
 
 // 创建 Axios 实例
 const instance = createAxios({

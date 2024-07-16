@@ -21,7 +21,7 @@ class UserController {
     async updateUser(req: Request, res: Response) {
         try {
             const { authorization } = req.headers;
-            const { username, age, email, introduction, nickname, sex } = req.body.params;
+            const { username, age, email, introduction, nickname, sex, phone } = req.body.params;
             // 数据验证
             if (!username || !age || !email || !sex) {
                 return res.status(400).json({ message: 'All fields are required' });
@@ -34,6 +34,7 @@ class UserController {
                 introduction,
                 nickname,
                 sex,
+                phone
             });
             if (!updatedUser[0] || updatedUser[0] === 0) {
                 return res.status(404).json({code:404, message: 'User not found' });

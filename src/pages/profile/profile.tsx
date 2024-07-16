@@ -162,6 +162,19 @@ const Profile: React.FC = () => {
           <Input placeholder="请输入邮箱地址" />
         </Form.Item>
         <Form.Item
+          name="phone"
+          label="手机号"
+          rules={[
+            {
+              pattern: /^1[3-9]\d{9}$/,
+              required: isEditMode,
+              message: '请输入正确的手机号码',
+            },
+          ]}
+        >
+          <Input placeholder={"请输入手机号码"} type='number'/>
+        </Form.Item>
+        <Form.Item
           name="sex"
           label="性别"
         >
@@ -175,9 +188,9 @@ const Profile: React.FC = () => {
           name="nickname"
           label="别名"
           tooltip="你的艺名"
-          rules={[{ whitespace: true, len: 15, message: '请输入别名(15位以内)' }]}
+          rules={[{ whitespace: true, max: 20, message: '请输入别名(20位以内)' }]}
         >
-          <Input placeholder="请输入别名(15位以内)" />
+          <Input placeholder="无别名" />
         </Form.Item>
         <Form.Item
           name="introduction"

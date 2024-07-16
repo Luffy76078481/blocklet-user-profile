@@ -14,13 +14,14 @@ class DatabaseService {
             try {
                 // 初始化时添加默认用户
                 const defaultUser = {
-                    _id: 'testuesrid_asdbansdmb234923764123jk',
+                    _id: 'testuesrid_asdbansdmb234923764123j1k',
                     username: 'demoUser1',
                     age: 18,
                     email: 'demoUser1@gmail.com',
                     introduction: 'demoUser1demoUser1demoUser1demoUser1demoUser1',
                     nickname: 'demoUser1Nickname',
                     sex: '1',
+                    phone: 13678522588
                 };
 
                 await this.db.insert(defaultUser);
