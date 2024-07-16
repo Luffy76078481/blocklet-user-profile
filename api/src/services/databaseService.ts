@@ -15,11 +15,11 @@ class DatabaseService {
                 // 初始化时添加默认用户
                 const defaultUser = {
                     _id: 'testuesrid_asdbansdmb234923764123jk',
-                    username: 'defaultUser',
+                    username: 'demoUser1',
                     age: 18,
-                    email: 'default@example.com',
-                    introduction: '',
-                    nickname: 'defaultNickname',
+                    email: 'demoUser1@gmail.com',
+                    introduction: 'demoUser1demoUser1demoUser1demoUser1demoUser1',
+                    nickname: 'demoUser1Nickname',
                     sex: '1',
                 };
 

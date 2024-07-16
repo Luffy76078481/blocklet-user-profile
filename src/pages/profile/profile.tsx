@@ -54,7 +54,7 @@ const Profile: React.FC = () => {
     return <header className='header'>
       <h4>
         <Avatar className='avatar' size="large" icon={<UserOutlined />} />
-        <i>用户4asdas123</i>
+        <i>用户 {userInfo.username}</i>
       </h4>
       <div className='vipbox' onClick={() => {
         messageApi.open({
